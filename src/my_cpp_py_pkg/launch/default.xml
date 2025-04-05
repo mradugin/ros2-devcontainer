@@ -1,0 +1,28 @@
+<launch>
+  <node
+    name="node1"
+    pkg="my_cpp_py_pkg"
+    namespace="test_namespace"
+    exec="py_node1.py"
+    output="screen"
+    emulate_tty="true"
+  />
+
+  <node
+    name="node2"
+    pkg="my_cpp_py_pkg"
+    namespace="test_namespace"
+    exec="py_node2.py"
+    output="screen"
+    emulate_tty="true"
+  />
+ 
+  <node
+    name="node3"
+    pkg="my_cpp_py_pkg"
+    namespace="test_namespace"
+    exec="cpp_node"
+    output="screen"
+    emulate_tty="true"
+  />
+</launch>

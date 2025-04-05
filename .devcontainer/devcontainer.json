@@ -1,0 +1,38 @@
+{
+    "name": "ROS Development Container",
+    "privileged": true,
+    "remoteUser": "rosuser", // Make sure this is the same as the username in the Dockerfile and mounts below
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "ARCH": "arm64", // arm64 or amd64
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions":[
+                "ms-azuretools.vscode-docker",
+                "ms-python.python",
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-themes",
+                "ms-vscode.cmake-tools",
+                "ms-vscode.cpptools-extension-pack",
+                "ms-iot.vscode-ros"
+            ]
+        }
+    },
+    "containerEnv": {
+        "ROS_DOMAIN_ID": "42",
+    },
+    "runArgs": [
+        "--net=host",
+        "--cap-add=SYS_PTRACE",
+        "--security-opt", "seccomp=unconfined",
+    ],
+    "mounts": [
+        "source=${localEnv:HOME}/.ssh,target=/home/rosuser/.ssh,type=bind",
+        "source=${localWorkspaceFolder}/.cache,target=/home/rosuser/.cache,type=bind",
+    ],
+    "onCreateCommand": "scripts/init-container.sh",
+    "initializeCommand": "scripts/init-local.sh"
+}

@@ -1,0 +1,15 @@
+{
+    "cmake.automaticReconfigure": false,
+    "cmake.skipConfigureIfCachePresent": true,
+    "cmake.configureOnOpen": false,
+    "cmake.configureOnEdit": false,
+    "python.autoComplete.extraPaths": [
+        "/workspaces/ros2-devcontainer/install/my_cpp_py_pkg/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/workspaces/ros2-devcontainer/install/my_cpp_py_pkg/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "ros.distro": "jazzy"
+}
