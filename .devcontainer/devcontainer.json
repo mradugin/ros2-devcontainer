@@ -24,15 +24,15 @@
         }
     },
     "containerEnv": {
-        "ROS_DOMAIN_ID": "42",
+        "ROS_DOMAIN_ID": "42"
     },
     "runArgs": [
         "--net=host",
         "--cap-add=SYS_PTRACE",
-        "--security-opt", "seccomp=unconfined",
+        "--security-opt", "seccomp=unconfined"
     ],
     "mounts": [
-        "source=${localWorkspaceFolder}/.cache,target=/home/rosuser/.cache,type=bind",
+        "source=${localWorkspaceFolder}/.cache,target=/home/rosuser/.cache,type=bind"
     ],
-    "onCreateCommand": "scripts/init-container.sh",
+    "onCreateCommand": "scripts/init-container.sh"
 }
