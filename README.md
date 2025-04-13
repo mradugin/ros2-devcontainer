@@ -2,6 +2,8 @@
 
 This repository contains a development container workspace setup for ROS2 development. It provides a convenient environment for running and debugging ROS2 nodes written in both C++ and Python.
 
+Current workspace works out of the box in Visual Studio Code running on **Windows**, **macOS** and **Linux**.
+
 ## Features
 
 - Pre-configured development environment for ROS2
