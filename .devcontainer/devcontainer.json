@@ -5,7 +5,9 @@
     "build": {
         "dockerfile": "Dockerfile",
         "args": {
-            "ARCH": "arm64", // arm64 or amd64
+            // If needed, override target container architecture. 
+            // For example, on Apple Silicon set below to amd64 to build and run container in x86 virtualization.
+            // "TARGETARCH": "amd64" // amd64 or arm64 
         }
     },
     "customizations": {

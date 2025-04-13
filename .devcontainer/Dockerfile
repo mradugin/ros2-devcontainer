@@ -1,6 +1,4 @@
-ARG ARCH=amd64
-
-FROM --platform=linux/${ARCH} ros:jazzy-ros-base AS base
+FROM --platform=linux/${TARGETARCH} ros:jazzy-ros-base AS base
 
 ARG USERNAME=rosuser
 ARG USER_UID=2000
