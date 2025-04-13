@@ -1,7 +1,7 @@
 FROM --platform=linux/${TARGETARCH} ros:jazzy-ros-base
 
 ARG USERNAME=rosuser
-ARG USER_UID=2000
+ARG USER_UID=1000
 ARG USER_GID=$USER_UID
 
 # Delete user if it exists in container (e.g Ubuntu Noble: ubuntu)
