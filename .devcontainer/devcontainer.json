@@ -32,7 +32,6 @@
         "--security-opt", "seccomp=unconfined",
     ],
     "mounts": [
-        "source=${localEnv:HOME}/.ssh,target=/home/rosuser/.ssh,type=bind",
         "source=${localWorkspaceFolder}/.cache,target=/home/rosuser/.cache,type=bind",
     ],
     "onCreateCommand": "scripts/init-container.sh",
