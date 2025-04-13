@@ -35,5 +35,4 @@
         "source=${localWorkspaceFolder}/.cache,target=/home/rosuser/.cache,type=bind",
     ],
     "onCreateCommand": "scripts/init-container.sh",
-    "initializeCommand": "scripts/init-local.sh"
 }
